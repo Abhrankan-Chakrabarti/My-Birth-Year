@@ -1,7 +1,7 @@
-birth_year = input('Birth Year: ')  # Taking user input as a string
-print(type(birth_year))  # Printing the type of birth_year (it will be str)
+from datetime import datetime
 
-age = 2024 - int(birth_year)  # Converting birth_year to int and calculating age
-print(type(age))  # Printing the type of age (it will be int)
+birth_year = input('Birth Year: ')  # Taking user input as a string
+current_year = datetime.now().year  # Getting the current year from the system
+age = current_year - int(birth_year)  # Calculating age
 
 print(age)  # Printing the calculated age
